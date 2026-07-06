@@ -46,7 +46,8 @@ const Register = () => {
     // console.log(res)
 
     try {
-      const res = await axios.post(" http://localhost:5000/register", newuser);
+      // const res = await axios.post(" http://localhost:5000/register", newuser);
+      const res = await axios.post("https://user-register-live.onrender.com/register", newuser);
       console.log("Responce from Server", res);
       if(res.status===200){
         setSuccess(res.data.message);
